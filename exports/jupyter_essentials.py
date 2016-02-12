@@ -244,8 +244,8 @@ def f(x):
                 **bold**  
                 ***both***  
                 ~~strikethrough~~  
-                [kbd]boxed[/kbd] (replace [] with <>)
-                [pre]```raw ----```[/pre] (replace [] with <>)
+                [kbd]boxed[/kbd] (replace [] with angle brackets)
+                [pre]```raw ----```[/pre] (replace [] with angle brackets)
                 </pre>
 # - **Build nested itemized lists**
 # 
