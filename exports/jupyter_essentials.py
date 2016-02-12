@@ -5,8 +5,8 @@
 #  <p><div class="lev1"><a href="#Essentials-of-Jupyter/IPython-Notebooks">Essentials of Jupyter/IPython Notebooks</a></div><div class="lev2"><a href="#Introduction">Introduction</a></div><div class="lev3"><a href="#What-is-the-Jupyter-Notebook?">What is the Jupyter Notebook?</a></div><div class="lev3"><a href="#Components">Components</a></div><div class="lev3"><a href="#Kernels">Kernels</a></div><div class="lev3"><a href="#Notebook-documents">Notebook documents</a></div><div class="lev3"><a href="#Installation-and-Upgrade">Installation and Upgrade</a></div><div class="lev3"><a href="#Access">Access</a></div><div class="lev2"><a href="#Notebook">Notebook</a></div><div class="lev3"><a href="#Modal-Editor">Modal Editor</a></div><div class="lev4"><a href="#Edit-mode">Edit mode</a></div><div class="lev4"><a href="#Command-mode">Command mode</a></div><div class="lev3"><a href="#Keyboard-Shortcuts-(Command-mode)">Keyboard Shortcuts (Command mode)</a></div><div class="lev4"><a href="#Notebooks">Notebooks</a></div><div class="lev4"><a href="#Navigation">Navigation</a></div><div class="lev4"><a href="#Cell-types">Cell types</a></div><div class="lev4"><a href="#Cell-creation">Cell creation</a></div><div class="lev3"><a href="#Keyboard-Shortcuts-(Edit-mode)">Keyboard Shortcuts (Edit mode)</a></div><div class="lev4"><a href="#Text">Text</a></div><div class="lev4"><a href="#Code">Code</a></div><div class="lev3"><a href="#Large-Outputs">Large Outputs</a></div><div class="lev3"><a href="#Raw-Cells">Raw Cells</a></div><div class="lev3"><a href="#Markdown-Cells">Markdown Cells</a></div><div class="lev2"><a href="#Kernel">Kernel</a></div><div class="lev3"><a href="#Cell-Magics">Cell Magics</a></div><div class="lev4"><a href="#Timing-code-execution">Timing code execution</a></div><div class="lev4"><a href="#Capturing-stdout/err">Capturing <code>stdout/err</code></a></div><div class="lev4"><a href="#Writing-contents-to-a-file">Writing contents to a file</a></div><div class="lev4"><a href="#Running-code-under-other-interpreters">Running code under other interpreters</a></div><div class="lev3"><a href="#Rich-Output">Rich Output</a></div><div class="lev4"><a href="#Display-imports">Display imports</a></div><div class="lev4"><a href="#Images">Images</a></div><div class="lev4"><a href="#HTML">HTML</a></div><div class="lev4"><a href="#JavaScript">JavaScript</a></div><div class="lev4"><a href="#LaTeX">LaTeX</a></div><div class="lev4"><a href="#Audio">Audio</a></div><div class="lev4"><a href="#Video">Video</a></div><div class="lev4"><a href="#External-sites">External sites</a></div><div class="lev4"><a href="#Links-to-local-files">Links to local files</a></div><div class="lev4"><a href="#Rich-output,-security,-and-nbviewer">Rich output, security, and nbviewer</a></div><div class="lev3"><a href="#Plotting-with-Matplotlib">Plotting with Matplotlib</a></div><div class="lev2"><a href="#Interactive-Widgets">Interactive Widgets</a></div><div class="lev3"><a href="#Using-interact">Using interact</a></div><div class="lev2"><a href="#Extensions">Extensions</a></div>
 
 # # Essentials of Jupyter/IPython Notebooks
-# 
-# Reference:
+
+# **References**:
 # 
 # - [IPython Documentation (official)](http://ipython.readthedocs.org/en/stable/index.html)
 # - [IPython Documentation (nbviewer)](http://nbviewer.jupyter.org/github/ipython/ipython/blob/3.x/examples/Index.ipynb)
@@ -92,7 +92,7 @@
 # 
 # - Anaconda Launcher (*shortcut*):
 # 
-# ---
+# 
 # 
 #     `C:\Python\node-webkit\nw.exe "C:\Python/node-webkit/launcher"`
 # 
@@ -100,7 +100,7 @@
 # 
 # - Notebook (*shortcut*):
 # 
-# ---
+# 
 # 
 #     `C:\Python\python.exe "C:\Python\Scripts/jupyter-script.py" notebook`
 # 
@@ -108,7 +108,7 @@
 # 
 # - Terminal (Mac/Linux) or Command Prompt Windows:
 # 
-# ---
+# 
 # 
 #     `jupyter notebook`
 
@@ -212,21 +212,25 @@ for i in range(25):
 # Raw cells have no input-output distinction and cannot be rendered into anything. When running all Notebook cells, raw  cells will remain exactly as is and the Notebook will automatically select the cell directly below it. Raw cells have no style options, no options to bold, italicize, or enlarge any text or characters in the cell.
 # 
 # Because they have no rendered form, raw cells can be used to include text or code not meant to be formatted or executed. This is useful, for example, to illustrate Markdown or code syntax in unrendered form without showing any output.
+<pre>
 This is a raw cell
 ```python
 def f(x):
     return x**2
 ```
+</pre>
 # ### Markdown Cells
 # 
 # Text can be added to Jupyter Notebooks using Markdown cells. [Markdown](http://daringfireball.net/projects/markdown/) is a popular markup language that is a superset of HTML. Markdown does not automatically hard-wrap text in paragraphs. If this is required, insert paragraph breaks by ending the line with two spaces and pressing Enter.
 
 # - **Add headings**
-    # Heading 1
-    # Heading 2
-    ## Heading 2.1
-    ### Heading 2.1.1
-    #### Heading 2.1.1.1
+                <pre>
+                # Heading 1
+                # Heading 2
+                ## Heading 2.1
+                ### Heading 2.1.1
+                #### Heading 2.1.1.1
+                </pre>
 # - **Format text**
 # 
 #     *italics*  
@@ -235,12 +239,14 @@ def f(x):
 #     ~~strikethrough~~  
 #     <kbd>boxed</kbd>   
 #     <pre>```raw ----```</pre>
-    *italics*  
-    **bold**  
-    ***both***  
-    ~~strikethrough~~  
-    <kbd>boxed</kbd>   
-    <pre>```raw ----```</pre>
+                <pre>
+                *italics*  
+                **bold**  
+                ***both***  
+                ~~strikethrough~~  
+                <kbd>boxed<kbd> (use <kbd ... /kbd>)
+                <pre>```raw ----```<pre> (use <pre ... /pre>)
+                </pre>
 # - **Build nested itemized lists**
 # 
 # 
@@ -250,12 +256,14 @@ def f(x):
 #         - Subitem
 #     - Item
 # - Two
-   - One
-       - Item
-       - Item
-           - Subitem
-       - Item
-   - Two
+                <pre>
+               - One
+                   - Item
+                   - Item
+                       - Subitem
+                   - Item
+               - Two
+               </pre>
 # - **Build nested enumerated lists**
 # 
 # 
@@ -263,36 +271,44 @@ def f(x):
 #     1. Item A
 #     1. Item B
 # 2. Two
-  1. One
-      1. Item A
-      1. Item B
-  2. Two
+            <pre>
+            1. One
+                1. Item A
+                1. Item B
+            2. Two
+            </pre>
 # - **Add horizontal rules**
 # 
 #     ----
-    ----
+                <pre>
+                ----
+                </pre>
 # - **Add blockquotes**
 #     
 # > This is a
 # > blockquote
 # 
-# \
+# ...
 # 
 # > This is a
 # >> nested
 # >> blockquote
-    > This is a
-    > blockquote
+                <pre>
+                > This is a
+                > blockquote
 
-    \
+                ...
 
-    > This is a
-    >> nested
-    >> blockquote
+                > This is a
+                >> nested
+                >> blockquote
+                </pre>
 # - **Add inline code:**
 # 
-# Inline `code` has `back-ticks` around it.
-Inline `code` has `back-ticks` around it.
+#     Inline `code` has `back-ticks` around it.
+                <pre>
+                Inline `code` has `back-ticks` around it.
+                </pre>
 # - **Add Github flavored markdown (GFM) code blocks meant for illustration instead of execution**
 #     
 #     Github flavored markdown allows the use of triple backticks (`  ```language...`) to create fenced code blocks that support syntax highlighting:
@@ -318,18 +334,22 @@ Inline `code` has `back-ticks` around it.
 #     //Javascript
 #     console.log("Hello World")
 #     ```
-            ```python
-            # Python
-            def f(x):
-                """Docstring"""
-                return x ** 2
-            ```
+                <pre>
+                ```python
+                # Python
+                def f(x):
+                    """Docstring"""
+                    return x ** 2
+                ```
+                </pre>
 # - **Add mathematical (LaTeX) equations**
 # 
 #     inline equations such as $e^{i\pi} + 1 = 0$ and displayed equations such as:
 #     $$e^x= \sum_{i=0}^\infty \frac{1}{i!}x^i$$
-    inline equations such as $e^{i\pi} + 1 = 0$ and displayed equations such as:
-    $$e^x= \sum_{i=0}^\infty \frac{1}{i!}x^i$$
+                <pre>
+                inline equations such as $e^{i\pi} + 1 = 0$ and displayed equations such as:
+                $$e^x= \sum_{i=0}^\infty \frac{1}{i!}x^i$$
+                </pre>
 # - **Add tables**
 # 
 # Tables are part of GFM and support inline Markdown.
@@ -339,11 +359,13 @@ Inline `code` has `back-ticks` around it.
 # `abs(x)` | Return the absolute value of `x`
 #          | `...`
 # `len(s)` | Return the length of an object. 
-    Function | Description
-    -------- | -----------
-    `abs(x)` | Return the absolute value of `x`
-             | ...
-    `len(s)` | Return the length of an object.
+                <pre>
+                Function | Description
+                -------- | -----------
+                `abs(x)` | Return the absolute value of `x`
+                         | ...
+                `len(s)` | Return the length of an object.
+                </pre>
 # Colons can be used to align columns:
 
 #    | left-aligned | centered | right-alined
@@ -352,12 +374,14 @@ Inline `code` has `back-ticks` around it.
 # B  | `$100` | `$100` | `$100`
 # C  | `$10` | `$10` | `$10`
 # D  | `$1` | `$1` | `$1`
-       | left-aligned | centered | right-alined
-    -- | ------------ | :------: | -----------:
-    A  | `$1,000` | `$1,000` | `$1,000`
-    B  | `$100` | `$100` | `$100`
-    C  | `$10` | `$10` | `$10`
-    D  | `$1` | `$1` | `$1`
+                <pre>
+                   | left-aligned | centered | right-alined
+                -- | ------------ | :------: | -----------:
+                A  | `$1,000` | `$1,000` | `$1,000`
+                B  | `$100` | `$100` | `$100`
+                C  | `$10` | `$10` | `$10`
+                D  | `$1` | `$1` | `$1`
+                </pre>
 # - **Add links**
 # 
 #     - external: [IPython's website](http://ipython.org)
@@ -369,15 +393,17 @@ Inline `code` has `back-ticks` around it.
 # 
 # [reflink]: http://ipython.org "Homepage"
 # [1]: http://ipython.org "Numbers can also be used as reference"
-- external: [IPython's website](http://ipython.org)
-    - external with mouse-over titles: [IPython's website](http://ipython.org "Homepage")
-    - reference: This is an [external reference link] [reflink]. It was defined in a separate [line][1].
-    - internal to Notebook headings: e.g., see [Markdown Cells](#Markdown-Cells) for more information...
-    - internal to Notebook files: [xf_test_jupyter](input/xf_test_jupyter.ipynb)
-    - internal to local files: <img src="images/python_logo.png\" />
+            <pre>
+            - external: [IPython's website](http://ipython.org)
+                - external with mouse-over titles: [IPython's website](http://ipython.org "Homepage")
+                - reference: This is an [external reference link] [reflink]. It was defined in a separate [line][1].
+                - internal to Notebook headings: e.g., see [Markdown Cells](#Markdown-Cells) for more information...
+                - internal to Notebook files: [xf_test_jupyter](input/xf_test_jupyter.ipynb)
+                - internal to local files: <img src="images/python_logo.png\" />
 
-[reflink]: http://ipython.org "Homepage"
-[1]: http://ipython.org "Numbers can also be used as reference"
+            [reflink]: http://ipython.org "Homepage"
+            [1]: http://ipython.org "Numbers can also be used as reference"
+            </pre>
 # ## Kernel
 # 
 # IPython provides extensions to the Python programming language that make working interactively convenient and efficient. These extensions are implemented in the IPython [Kernel](http://nbviewer.jupyter.org/github/ipython/ipython/blob/3.x/examples/IPython%20Kernel/Index.ipynb)
