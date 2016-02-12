@@ -341,7 +341,6 @@ div#notebook {
 <ul>
 <li>Anaconda Launcher (<em>shortcut</em>):</li>
 </ul>
-<hr>
 
 <pre><code>`C:\Python\node-webkit\nw.exe "C:\Python/node-webkit/launcher"`
 
@@ -350,7 +349,6 @@ div#notebook {
 <ul>
 <li>Notebook (<em>shortcut</em>):</li>
 </ul>
-<hr>
 
 <pre><code>`C:\Python\python.exe "C:\Python\Scripts/jupyter-script.py" notebook`
 
@@ -359,7 +357,6 @@ div#notebook {
 <ul>
 <li>Terminal (Mac/Linux) or Command Prompt Windows:</li>
 </ul>
-<hr>
 
 <pre><code>`jupyter notebook`</code></pre>
 
@@ -768,11 +765,13 @@ def f(x):
 
 </div>
 </div>
-</div>    # Heading 1
-    # Heading 2
-    ## Heading 2.1
-    ### Heading 2.1.1
-    #### Heading 2.1.1.1
+</div>                <pre>
+                # Heading 1
+                # Heading 2
+                ## Heading 2.1
+                ### Heading 2.1.1
+                #### Heading 2.1.1.1
+                </pre>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -790,12 +789,14 @@ def f(x):
 
 </div>
 </div>
-</div>    *italics*  
-    **bold**  
-    ***both***  
-    ~~strikethrough~~  
-    <kbd>boxed</kbd>   
-    <pre>```raw ----```</pre>
+</div>                <pre>
+                *italics*  
+                **bold**  
+                ***both***  
+                ~~strikethrough~~  
+                <[kbd]>boxed<[/kbd]> (without the [])
+                <[pre]>```raw ----```<[/pre]> (without the [])
+                </pre>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -819,12 +820,14 @@ def f(x):
 
 </div>
 </div>
-</div>   - One
-       - Item
-       - Item
-           - Subitem
-       - Item
-   - Two
+</div>                <pre>
+               - One
+                   - Item
+                   - Item
+                       - Subitem
+                   - Item
+               - Two
+               </pre>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -844,10 +847,12 @@ def f(x):
 
 </div>
 </div>
-</div>  1. One
-      1. Item A
-      1. Item B
-  2. Two
+</div>            <pre>
+            1. One
+                1. Item A
+                1. Item B
+            2. Two
+            </pre>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -861,7 +866,9 @@ def f(x):
 
 </div>
 </div>
-</div>    ----
+</div>                <pre>
+                ----
+                </pre>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -873,7 +880,7 @@ def f(x):
 <blockquote><p>This is a
 blockquote</p>
 </blockquote>
-<p>\</p>
+<p>...</p>
 <blockquote><p>This is a</p>
 <blockquote><p>nested
 blockquote</p>
@@ -882,27 +889,32 @@ blockquote</p>
 
 </div>
 </div>
-</div>    > This is a
-    > blockquote
+</div>                <pre>
+                > This is a
+                > blockquote
 
-    \
+                ...
 
-    > This is a
-    >> nested
-    >> blockquote
+                > This is a
+                >> nested
+                >> blockquote
+                </pre>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li><strong>Add inline code:</strong></li>
-</ul>
+<li><p><strong>Add inline code:</strong></p>
 <p>Inline <code>code</code> has <code>back-ticks</code> around it.</p>
+</li>
+</ul>
 
 </div>
 </div>
-</div>Inline `code` has `back-ticks` around it.
+</div>                <pre>
+                Inline `code` has `back-ticks` around it.
+                </pre>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -932,12 +944,14 @@ blockquote</p>
 
 </div>
 </div>
-</div>            ```python
-            # Python
-            def f(x):
-                """Docstring"""
-                return x ** 2
-            ```
+</div>                <pre>
+                ```python
+                # Python
+                def f(x):
+                    """Docstring"""
+                    return x ** 2
+                ```
+                </pre>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -952,8 +966,10 @@ blockquote</p>
 
 </div>
 </div>
-</div>    inline equations such as $e^{i\pi} + 1 = 0$ and displayed equations such as:
-    $$e^x= \sum_{i=0}^\infty \frac{1}{i!}x^i$$
+</div>                <pre>
+                inline equations such as $e^{i\pi} + 1 = 0$ and displayed equations such as:
+                $$e^x= \sum_{i=0}^\infty \frac{1}{i!}x^i$$
+                </pre>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -987,11 +1003,13 @@ blockquote</p>
 
 </div>
 </div>
-</div>    Function | Description
-    -------- | -----------
-    `abs(x)` | Return the absolute value of `x`
-             | ...
-    `len(s)` | Return the length of an object.
+</div>                <pre>
+                Function | Description
+                -------- | -----------
+                `abs(x)` | Return the absolute value of `x`
+                         | ...
+                `len(s)` | Return the length of an object.
+                </pre>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -1045,12 +1063,14 @@ blockquote</p>
 
 </div>
 </div>
-</div>       | left-aligned | centered | right-alined
-    -- | ------------ | :------: | -----------:
-    A  | `$1,000` | `$1,000` | `$1,000`
-    B  | `$100` | `$100` | `$100`
-    C  | `$10` | `$10` | `$10`
-    D  | `$1` | `$1` | `$1`
+</div>                <pre>
+                   | left-aligned | centered | right-alined
+                -- | ------------ | :------: | -----------:
+                A  | `$1,000` | `$1,000` | `$1,000`
+                B  | `$100` | `$100` | `$100`
+                C  | `$10` | `$10` | `$10`
+                D  | `$1` | `$1` | `$1`
+                </pre>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -1071,15 +1091,17 @@ blockquote</p>
 
 </div>
 </div>
-</div>- external: [IPython's website](http://ipython.org)
-    - external with mouse-over titles: [IPython's website](http://ipython.org "Homepage")
-    - reference: This is an [external reference link] [reflink]. It was defined in a separate [line][1].
-    - internal to Notebook headings: e.g., see [Markdown Cells](#Markdown-Cells) for more information...
-    - internal to Notebook files: [xf_test_jupyter](input/xf_test_jupyter.ipynb)
-    - internal to local files: <img src="images/python_logo.png\" />
+</div>            <pre>
+            - external: [IPython's website](http://ipython.org)
+                - external with mouse-over titles: [IPython's website](http://ipython.org "Homepage")
+                - reference: This is an [external reference link] [reflink]. It was defined in a separate [line][1].
+                - internal to Notebook headings: e.g., see [Markdown Cells](#Markdown-Cells) for more information...
+                - internal to Notebook files: [xf_test_jupyter](input/xf_test_jupyter.ipynb)
+                - internal to local files: <img src="images/python_logo.png\" />
 
-[reflink]: http://ipython.org "Homepage"
-[1]: http://ipython.org "Numbers can also be used as reference"
+            [reflink]: http://ipython.org "Homepage"
+            [1]: http://ipython.org "Numbers can also be used as reference"
+            </pre>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
